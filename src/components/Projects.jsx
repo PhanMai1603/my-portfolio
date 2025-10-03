@@ -3,48 +3,52 @@ import { ExternalLink } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Clothing E-commerce Website",
-    description: "Create chat bot like gemini ai with html and css",
-    image: "/projects/chatbot.png",
-    url: "#",
+    title: "Clothing E-commerce",
+    description: "An online store with product search, cart, and checkout.",
+    image: "/projects/Clothing.png",
+    url: "https://github.com/PhanMai1603/E-commerce-Website",
     tags: ["Html", "Css", "Javascript"],
   },
   {
     id: 2,
-    title: "Share-And-Care Clothing E-commerce management system",
-    description: "Website Landing page 3D  html and css",
-    image: "/projects/butterfly-three-js.png",
-    url: "#",
-    tags: ["Html", "Css", "Javascript"],
+    title: "Clothing Ecommerce Management System",
+    description: "Admin system for managing products, orders, and users.",
+    image: "/projects/Management.png",
+    url: "https://github.com/PhanMai1603/E-commerce-Management-System",
+    tags: ["TypeScript.", "NextJs"],
   },
   {
     id: 3,
-    title: "Landing Intro Page",
-    description: "Landing Intro Pages with html and css",
-    image: "/projects/landiing-page.png",
-    url: "#",
-    tags: ["Html", "Css", "Javascript"],
+    title: "My Portfolio",
+    description: "Personal portfolio website to showcase my projects.",
+    image: "/projects/portifolio.png",
+    url: "https://github.com/PhanMai1603/my-portfolio",
+    tags: ["Next.js", "TailwindCSS"],
   },
 ];
+
 export const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-2 relative">
-      <div className="container mx-auto max-w-5xl">
+    <section id="projects" className="py-24 px-4 relative">
+      <div className="container mx-auto max-w-6xl">
+        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-secondary">
           Featured <span className="text-primary">Projects</span>
         </h2>
-        <p className="text-center text-secondary mb-12 max-w-2xl mx-auto">
-          There are some projects Each project was created with attention to
-          detail and performance
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Here are some of my recent works. Each project was built with a focus
+          on clean code, performance, and modern UI design.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.map((project) => (
             <div
-              key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              key={project.id}
+              className="group bg-card border border-border rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
             >
-              <div className="h-45 overflow-hidden">
+              {/* Image */}
+              <div className="h-52 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -52,29 +56,41 @@ export const Projects = () => {
                 />
               </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-3 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium rounded-full bg-primary/20 text-secondary">
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-1 text-secondary">
-                {project.title}
-              </h3>
-              <p className="text-secondary text-sm mb-4">
-                {project.description}
-              </p>
-              <div className="flex space-x-3">
-                <a
-                  target="_blank"
-                  href={project.url}
-                  className="text-primary px-2 py-2 transition-colors duration-300"
-                >
-                  <ExternalLink />
-                </a>
+
+                {/* Title */}
+                <h3 className="text-xl font-semibold mb-2 text-secondary group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Link */}
+                <div className="mt-auto">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={project.url}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
+                  >
+                    View Project <ExternalLink size={16} />
+                  </a>
+                </div>
               </div>
             </div>
           ))}

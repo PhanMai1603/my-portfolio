@@ -9,7 +9,7 @@ export const AboutSection = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-secondary">
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">Web developer & technology </h3>
+                        <h3 className="text-2xl font-semibold">Web Developer & Technology </h3>
                         <p className="text-muted-foreground ">
                             I am a Software Engineering graduate eager to start my career in a professional environment where I can apply my knowledge and grow through real-world experience. 
                         </p>
@@ -19,7 +19,7 @@ export const AboutSection = () => {
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <a href="#contact" className="px-6 py-2 rounded-full bg-primary text-primary-foreground 
                             font-medium transition-all duration-300 hover:shaow-[0_0_10px_rgba(139,93,246,0.5)] hover:scale-10s active:scale-95">Get In Contact Me</a>
-                            <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">Download CV</a>
+                            <a href="https://drive.google.com/file/d/1kKV7_--CHH3ZadyKf9jTQjv7NfPr1LeK/view?usp=sharing" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">Download CV</a>
                         </div>
                     </div>
 
@@ -33,7 +33,7 @@ export const AboutSection = () => {
                                 item-enter px-4 backface-hidden">
 
                                 <Code  className="h-8 w-8 mb-2"/>
-                                <h4 className="text-lg font-bold"> web Development</h4>
+                                <h4 className="text-lg font-bold"> Web Development</h4>
                                 </div>
                             </div>
                         </div>

@@ -20,7 +20,9 @@ export const MainSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground text-secondary max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I am an Information Technology graduate eager to start my career in a professional environment where I can apply my knowledge and grow through real-world experience.
+            I am an Information Technology graduate eager to start my career in
+            a professional environment where I can apply my knowledge and grow
+            through real-world experience.
           </p>
         </div>
 
@@ -35,9 +37,16 @@ export const MainSection = () => {
         </div>
       </div>
 
-      <div className="absolute text-secondary bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span>Scroll</span>
-        <ArrowDown className="h-6 w-6 text-primary" />
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <a
+          href="#about"
+          className="flex flex-col items-center group cursor-pointer"
+        >
+          <span className="text-xs md:text-sm font-semibold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent tracking-[0.3em] uppercase">
+            Scroll
+          </span>
+          <ArrowDown className="h-6 w-6 text-primary mt-2 group-hover:scale-125 transition-transform duration-300" />
+        </a>
       </div>
     </section>
   );
